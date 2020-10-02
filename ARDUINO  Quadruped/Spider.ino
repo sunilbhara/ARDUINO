@@ -519,7 +519,6 @@ void step_back(unsigned int step)
   }
 }
 
-// add by RegisHsu
 
 void body_left(int i)
 {
@@ -648,56 +647,6 @@ void head_down(int i)
   set_site(3, KEEP, KEEP, site_now[3][2] - i);
   wait_all_reach();
 }
-
-//void body_dance(int i)
-//{
-//  float x_tmp;
-//  float y_tmp;
-//  float z_tmp;
-//  float body_dance_speed = 2;
-//  sit();
-//  move_speed = 1;
-//  set_site(0, x_default, y_default, KEEP);
-//  set_site(1, x_default, y_default, KEEP);
-//  set_site(2, x_default, y_default, KEEP);
-//  set_site(3, x_default, y_default, KEEP);
-//  wait_all_reach();
-//  //stand();
-//  set_site(0, x_default, y_default, z_default - 20);
-//  set_site(1, x_default, y_default, z_default - 20);
-//  set_site(2, x_default, y_default, z_default - 20);
-//  set_site(3, x_default, y_default, z_default - 20);
-//  wait_all_reach();
-//  move_speed = body_dance_speed;
-//  head_up(30);
-//  for (int j = 0; j < i; j++)
-//  {
-//    if (j > i / 4)
-//      move_speed = body_dance_speed * 2;
-//    if (j > i / 2)
-//      move_speed = body_dance_speed * 3;
-//    set_site(0, KEEP, y_default - 20, KEEP);
-//    set_site(1, KEEP, y_default + 20, KEEP);
-//    set_site(2, KEEP, y_default - 20, KEEP);
-//    set_site(3, KEEP, y_default + 20, KEEP);
-//    wait_all_reach();
-//    set_site(0, KEEP, y_default + 20, KEEP);
-//    set_site(1, KEEP, y_default - 20, KEEP);
-//    set_site(2, KEEP, y_default + 20, KEEP);
-//    set_site(3, KEEP, y_default - 20, KEEP);
-//    wait_all_reach();
-//  }
-//  move_speed = body_dance_speed;
-//  head_down(30);
-//}
-
-
-/*
-  - microservos service /timer interrupt function/50Hz
-  - when set site expected,this function move the end point to it in a straight line
-  - temp_speed[4][3] should be set before set expect site,it make sure the end point
-   move in a straight line,and decide move speed.
-   ---------------------------------------------------------------------------*/
 void servo_service(void)
 {
   sei();
