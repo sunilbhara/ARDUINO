@@ -4,7 +4,6 @@
 
 
 //Install the Flexitimer2 library for the code to work
-//Install the Adafruit driver incase using the oled panel
 //oled panel is optional
 
 
@@ -89,7 +88,7 @@ void setup()
       site_now[i][j] = site_expect[i][j];
     }
   }
-  //start servo service
+ 
   FlexiTimer2::set(20, servo_service);
   FlexiTimer2::start();
   //initialize servos
